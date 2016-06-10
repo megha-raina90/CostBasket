@@ -15,24 +15,21 @@ import org.mockito.MockitoAnnotations;
 import static org.mockito.Mockito.*;
 
 import com.cts.bo.BucketPrice;
-import com.cts.bo.CalculateBucketPrice;
+import com.cts.bo.PriceCalculator;
 import com.cts.exception.NotValidFruitException;
 
 public class CalculateBucketPriceTest {
 
-	private CalculateBucketPrice buckprice;
+	private PriceCalculator buckprice;
 	Map<String, Integer> basket;
-	//@Mock
-	//Scanner scanner;
+	
 
 	@Before
 	public void setUp() {
 
-		buckprice = new CalculateBucketPrice();
+		buckprice = new PriceCalculator();
 		basket = new HashMap<String, Integer>();
-		//MockitoAnnotations.initMocks(this);
-		//Mockito.mock(Scanner.class);
-
+		
 	}
 
 	@Test
@@ -51,14 +48,7 @@ public class CalculateBucketPriceTest {
 		assertEquals(0, result);
 	}
 
-	@Test
-	public void getUserInputShouldTakeUserInput() throws NotValidFruitException {
-
-		Map<String, Integer> bucketmap = buckprice.getUserInput();
-		assertNotNull(bucketmap);
-		equals(bucketmap);
-
-	}
+	
 
 	
 

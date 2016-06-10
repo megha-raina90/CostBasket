@@ -2,17 +2,17 @@ package com.cts.execute;
 
 import java.util.Map;
 
-import com.cts.bo.CalculateBucketPrice;
+import com.cts.bo.PriceCalculator;
 import com.cts.exception.NotValidFruitException;
 
 public class Executor {
 
-	// The class kick starts the project
+	
 	
 	public static void main(String[] args) {
-		CalculateBucketPrice cbp= new  CalculateBucketPrice();
+		PriceCalculator priceCalculator= new  PriceCalculator();
 		try {
-			Map<String ,Integer> basketmap=cbp.getUserInput();
+			priceCalculator.getUserInput();
 		} catch (NotValidFruitException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
